@@ -10,12 +10,12 @@ export function StoreItem({ id, name, price, discount, imgUrl}){
         
      <Card className="h-100">
         <Nav.Link to="/item/{id}" as={NavLink}>
-        <Card.Img 
-            variant="top" 
-            src={imgUrl} 
-            height="200px" 
-            style={{objectFit: "cover"}}
-        />
+            <Card.Img 
+                variant="top" 
+                src={imgUrl} 
+                height="200px" 
+                style={{objectFit: "cover"}}
+            />
         </Nav.Link>
         
         {discount !== 0 && (

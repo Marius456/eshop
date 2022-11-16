@@ -2,10 +2,6 @@ import { createContext, useContext, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 import { useLocalStorage } from "../hooks/useLocalStorage"
 
-var CartItem = {
-    id: Number,
-    quantity: Number
-}
 
 const ShoppingCartContext = createContext({})
 
