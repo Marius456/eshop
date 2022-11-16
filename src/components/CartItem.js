@@ -19,11 +19,11 @@ export function CartItem({id, quantity}){
                     {item.name} {quantity > 1 && ( <span className="text-muted" style={{fontSize: ".65rem"}}>x{quantity}</span>)}
                 </div>
                 <div className="text-muted" style={{fontSize: ".75rem"}}>
-                    {formatCurrency(item.price)}
+                    {formatCurrency(item.price * (100 - item.discount) / 100)}
                 </div>
             </div>
             <div>
-              {formatCurrency(item.price * quantity)}
+              {formatCurrency(item.price * (100 - item.discount) / 100 * quantity)}
             </div>
             <Button variant="outline-danger" size="sm" onClick={() => removeFromCart(item.id)}>&times;</Button>
         </Stack>
