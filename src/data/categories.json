@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Books",
+        "description": "There is all books that we selling",
+        "imgUrl": "/imgs/book.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Food",
+        "description": "There is all food that we selling",
+        "imgUrl": "/imgs/banana.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Cars",
+        "description": "There is all cars that we selling",
+        "imgUrl": "/imgs/car.jpg"
+    }
+]

@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "name": "Book",
+      "name": "Harry Potter",
       "description": "Bestseller book is now in our shop! Don't miss out of this fantastic opportunity!",
       "price": 10.99,
       "count": 10,
@@ -34,5 +34,14 @@
       "count": 10,
       "discount": 50,
       "imgUrl": "/imgs/car.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Lord of Rings",
+      "description": "Bestseller book is now in our shop! Don't miss out of this fantastic opportunity!",
+      "price": 20.99,
+      "count": 10,
+      "discount": 10,
+      "imgUrl": "/imgs/book.jpg"
     }
   ]
