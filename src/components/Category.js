@@ -8,7 +8,7 @@ export function Category({ id, name, description, imgUrl }) {
                 <Nav.Link to={"/store/" + name} as={NavLink}>
                     <Card.Img
                         variant="top"
-                        src={imgUrl}
+                        src={process.env.PUBLIC_URL + imgUrl}
                         height="200px"
                         style={{ objectFit: "cover" }}
                     />

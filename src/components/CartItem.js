@@ -13,7 +13,7 @@ export function CartItem({ id, quantity }) {
         <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
             <Nav.Link to={"/item/" + id} as={NavLink}>
                 <img
-                    src={item.imgUrl}
+                    src={process.env.PUBLIC_URL + item.imgUrl}
                     style={{ width: "125px", height: "75px", objectFit: "cover" }}
                 />
             </Nav.Link>

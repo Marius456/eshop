@@ -16,7 +16,7 @@ export function ItemDetail() {
     return <><h1>Item</h1>
         <div className="details">
             <div className="big-img">
-                <img src={item.imgUrl} alt="" />
+                <img src={process.env.PUBLIC_URL + item.imgUrl} alt="" />
             </div>
 
             <div className="box">

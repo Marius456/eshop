@@ -9,7 +9,7 @@ export function StoreItem({ id, name, price, discount, imgUrl }) {
             <Nav.Link to={"/item/" + id} as={NavLink}>
                 <Card.Img
                     variant="top"
-                    src={imgUrl}
+                    src={process.env.PUBLIC_URL + imgUrl}
                     height="200px"
                     style={{ objectFit: "cover" }}
                 />
