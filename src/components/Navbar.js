@@ -1,9 +1,11 @@
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
+import { useLogin } from "../context/LoginContext"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 
 export function Navbar() {
     const { openCart, cartQuantity } = useShoppingCart()
+    const { openLogin, currentUser, Logout } = useLogin()
     return (
         <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
             <Container>
@@ -47,6 +49,34 @@ export function Navbar() {
                         </div>
                     </Button>
                 )}
+
+                {(currentUser.email !== "") ? (
+                    <Button
+                        onClick={Logout}
+                        style={{
+                            width: "6rem",
+                            height: "3rem",
+                            position: "relative",
+                            color: "#FFF",
+                            fontWeight: 700
+                        }}
+                        className="rounded-square"
+                    >
+                        LOGOUT
+                    </Button>) : (
+                    <Button
+                        onClick={openLogin}
+                        style={{
+                            width: "6rem",
+                            height: "3rem",
+                            position: "relative",
+                            color: "#FFF",
+                            fontWeight: 700
+                        }}
+                        className="rounded-square"
+                    >
+                        LOGIN
+                    </Button>)}
             </Container>
         </NavbarBs>
     )
