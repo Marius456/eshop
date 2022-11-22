@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap"
+import { Button, Container, Nav, Navbar as NavbarBs, NavDropdown } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
 import { useLogin } from "../context/LoginContext"
 import { useShoppingCart } from "../context/ShoppingCartContext"
@@ -51,19 +51,16 @@ export function Navbar() {
                 )}
 
                 {(currentUser.email !== "") ? (
-                    <Button
-                        onClick={Logout}
-                        style={{
-                            width: "6rem",
-                            height: "3rem",
-                            position: "relative",
-                            color: "#FFF",
-                            fontWeight: 700
-                        }}
-                        className="rounded-square"
-                    >
-                        LOGOUT
-                    </Button>) : (
+                    <Nav>
+                        <NavDropdown
+                            id="nav-dropdown"
+                            title={currentUser.name}
+                        >
+                            <NavDropdown.Item to="/orders" as={NavLink}>My orders</NavDropdown.Item>
+                            <NavDropdown.Item onClick={Logout}>Logout</NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                ) : (
                     <Button
                         onClick={openLogin}
                         style={{

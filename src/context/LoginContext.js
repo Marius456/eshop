@@ -20,22 +20,23 @@ export function LoginProvider({ children }) {
 
     const storeUser = getUser(1)
 
-    const [user, setUser] = useState({ name: "", email: "" })
     const [error, setError] = useState("")
 
     const Login = details => {
         if (details.email === storeUser.email && details.password === storeUser.password) {
             setCurrentUser({
+                id: storeUser.id,
                 name: storeUser.name,
                 email: details.email
             })
+            setError("")
         } else {
             setError("Details do not match!")
         }
     }
 
     const Logout = () => {
-        setCurrentUser({ name: "", email: "" })
+        setCurrentUser({ id: 0, name: "", email: "" })
     }
 
     return <LoginContext.Provider

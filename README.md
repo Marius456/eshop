@@ -9,7 +9,7 @@ https://marius456.github.io/eshop/
   - Shopping cart
   - Login
   
-## Planing features:
+## Planning features:
   - Orders for logged user
   - Shops locations on map
   - Checkout

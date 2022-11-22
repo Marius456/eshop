@@ -10,6 +10,10 @@ export function LoginForm({ isLoginOpen }) {
         e.preventDefault()
 
         Login(details)
+        
+        if(error === ""){
+            closeLogin()
+        }
     }
 
     return (

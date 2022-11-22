@@ -1,0 +1,12 @@
+[
+    {
+        "orderId": 1,
+        "itemId": 1,
+        "orderedDiscount": 10
+    },
+    {
+        "orderId": 1,
+        "itemId": 2,
+        "orderedDiscount": 0
+    }
+]
